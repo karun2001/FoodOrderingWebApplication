@@ -24,7 +24,9 @@ export async function putData(items, data){
     const resData = await response.json();
     if(!response.ok){
         throw new Error('Failed to update Data');
+        
     }
+    
     return resData.message;
 
 }

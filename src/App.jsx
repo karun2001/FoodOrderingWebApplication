@@ -1,32 +1,18 @@
 import Menu from "./components/Menu";
 import Header from "./components/Header";
 import { CartContextProvider } from "./Store/CartContext.jsx";
-import { fetchData } from "./http.js";
 import { useEffect, useState } from "react";
 import Cart from "./components/Cart.jsx";
 import { CartOpenContextProvider } from "./Store/CartOpenContext.jsx";
 import Checkout from "./components/Checkout.jsx";
-
+import useHttp from "./hooks/useHttp.jsx";
+const config = {};
 function App() {
 
-  const [meals, setMeals] = useState([]);
-  const [error, setError] = useState('');
-
-  useEffect(()=>{
-    async function fetchMeals(){
-      try{
-        const fetchedMeals = await fetchData();
-        setMeals(fetchedMeals);
-      } catch(error) {
-        console.log(error);
-        setError({message: error.message || "Failed to fetch"});
-      } 
-    }
-    fetchMeals();
-  },[]);
-
-
-  
+  const {data:meals, error, isLoading} = useHttp("http://localhost:3000/meals",config,[]);
+  if(isLoading){
+    return (<h1>Loading...</h1>);
+  }
   if(error){
     return(<h1>Error oocured {error.message}</h1>)
   }
@@ -40,7 +26,7 @@ function App() {
         <Menu meals={meals} />
       </CartContextProvider>
     </CartOpenContextProvider>
-      
+
   );
 }
 

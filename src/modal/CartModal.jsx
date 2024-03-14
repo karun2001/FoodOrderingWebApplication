@@ -5,11 +5,12 @@ export default function CartModal({children, open, className="", onClose}){
     const modalRef = useRef();
 
     useEffect(()=>{
+        const modal = modalRef.current;
         if(open){
-            modalRef.current.showModal();
+            modal.showModal();
         }
         return ()=>{
-            modalRef.current.close();
+            modal.close();
         }
     }, [open])
 
