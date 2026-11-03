@@ -20,9 +20,10 @@ export default function Checkout({onClose}){
         (total, item)=> total+ (item.quantity * item.price) , 0);
     const ctxProgress = useContext(CartOpenContext);
     
-    const { data, error, isLoading, sendRequest, clearData} = useHttp('http://localhost:3000/orders', config,)
+   // const { data, error, isLoading, sendRequest, clearData} = useHttp('http://localhost:3000/orders', config,)
+   const { data, error, isLoading, sendRequest, clearData} = useHttp('/orders.json')
 
-
+ 
     function handleClose(){
         ctxProgress.hideCheckOut();
     }

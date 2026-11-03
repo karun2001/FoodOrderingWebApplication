@@ -9,7 +9,8 @@ import useHttp from "./hooks/useHttp.jsx";
 const config = {};
 function App() {
 
-  const {data:meals, error, isLoading} = useHttp("http://localhost:3000/meals",config,[]);
+  // const {data:meals, error, isLoading} = useHttp("http://localhost:3000/meals",config,[]);
+  const {data:meals, error, isLoading} = useHttp("/available-meals.json",config,[]);
   if(isLoading){
     return (<h1>Loading...</h1>);
   }
