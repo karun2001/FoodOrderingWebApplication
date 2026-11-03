@@ -1,5 +1,11 @@
 # 🍽️ Food Ordering Web Application
 
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://food-ordering-web-application.vercel.app)
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-Fast-purple.svg)](https://vitejs.dev/)
+
+> 🔗 **Live Demo:** [https://food-ordering-web-application.vercel.app](https://food-ordering-web-application-zgfy.vercel.app/)
+
 > A responsive Single Page Application (SPA) built with React.js and modern state management, enabling seamless meal discovery, cart management, and checkout processing against a RESTful backend service.
 
 ---
