@@ -1,6 +1,6 @@
 # 🍽️ Food Ordering Web Application
 
-[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://food-ordering-web-application.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://food-ordering-web-application-zgfy.vercel.app/)
 [![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-Fast-purple.svg)](https://vitejs.dev/)
 
